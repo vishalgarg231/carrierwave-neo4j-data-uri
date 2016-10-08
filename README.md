@@ -47,6 +47,15 @@ image.attachment_data_uri = 'data:image/gif;base64,R0lGODlhAQABAJEAAAAAAP////8AA
 image.save
 ```
 
+## Documentation
+
+Documentation is available [here](http://www.rubydoc.info/gems/carrierwave-neo4j-data-uri)
+
+## Example
+
+Usage examples is also available [here](example/mock.rb)
+
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
