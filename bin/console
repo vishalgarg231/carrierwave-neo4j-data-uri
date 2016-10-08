@@ -10,5 +10,6 @@ require "carrierwave/neo4j-data-uri"
 # require "pry"
 # Pry.start
 
+require 'readline'
 require "irb"
 IRB.start
