@@ -1,8 +1,6 @@
 # Carrierwave::Neo4j::Data::Uri
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/carrierwave/neo4j/data/uri`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Carrierwave Neo4j plugin that allows create image from data uri
 
 ## Installation
 
@@ -22,7 +20,32 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+class Image
+  include Neo4j::ActiveNode
+
+  property :attachment, type: String
+  mount_uploader :attachment, AttachmentUploader
+end
+```
+
+Then we can create image from data
+
+```
+image = Image.new
+image.attachment_data_uri = 'data:image/gif;base64,R0lGODlhAQABAJEAAAAAAP////8AAP///yH5BAEAAAMALAAAAAABAAEAAAICVAEAOw=='
+image.save
+```
+
+Optionally, to customize the file name, specify the `#{column}_data_filename` and `#{column}_data_mimetype` attributes before the `#{column}_data_uri` attribute.
+
+```ruby
+image = Image.find 'f854208e-3fc9-4bf7-b9c9-dad46c596ed6'
+image.attachment_data_filename = 'somefile.jpg'
+image.attachment_data_mimetype = 'image/jpeg'
+image.attachment_data_uri = 'data:image/gif;base64,R0lGODlhAQABAJEAAAAAAP////8AAP///yH5BAEAAAMALAAAAAABAAEAAAICVAEAOw=='
+image.save
+```
 
 ## Development
 
@@ -32,10 +55,8 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/carrierwave-neo4j-data-uri. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
-
-
-## License
-
-The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
+1. Fork it ( https://github.com/vishalgarg231/carrierwave-neo4j-data-uri/fork )
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create a new Pull Request
