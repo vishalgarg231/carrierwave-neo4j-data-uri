@@ -1,6 +1,6 @@
 # Carrierwave::Neo4j::Data::Uri !! Kudos !!
 
-Carrierwave Neo4j plugin that allows create image from data uri
+Carrierwave Neo4j plugin that allows to create image from data uri
 
 ## Installation
 
