@@ -1,3 +1,5 @@
+[![Gem Version](https://badge.fury.io/rb/carrierwave-neo4j-data-uri.svg)](https://badge.fury.io/rb/carrierwave-neo4j-data-uri)[![Code Climate](https://codeclimate.com/github/vishalgarg231/carrierwave-neo4j-data-uri/badges/gpa.svg)](https://codeclimate.com/github/vishalgarg231/carrierwave-neo4j-data-uri)
+
 # Carrierwave::Neo4j::Data::Uri !! Kudos !!
 
 Carrierwave Neo4j plugin that allows to create image from data uri
