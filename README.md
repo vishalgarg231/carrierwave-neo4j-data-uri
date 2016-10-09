@@ -18,6 +18,10 @@ Or install it yourself as:
 
     $ gem install carrierwave-neo4j-data-uri
 
+Next to install it run
+
+    $ rails generate carrierwave_neo4j_data_uri:install
+
 ## Usage
 
 ```ruby
