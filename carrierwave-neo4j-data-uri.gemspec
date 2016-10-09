@@ -2,6 +2,7 @@
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'carrierwave/neo4j_data_uri/version'
+require "carrierwave/neo4j-data-uri"
 
 Gem::Specification.new do |spec|
   spec.name          = "carrierwave-neo4j-data-uri"
@@ -34,7 +35,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'data_uri'
 
   spec.add_development_dependency "bundler", "~> 1.12.5"
-  spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_development_dependency "rake", "~> 11.2.2"
   spec.add_development_dependency 'yard', '~> 0.8'
   spec.add_development_dependency 'rb-readline'
 end

@@ -1,5 +1,12 @@
+require "carrierwave/neo4j/version"
+require "neo4j"
+require "carrierwave"
+require "carrierwave/validations/active_model"
+require "carrierwave/neo4j/uploader_converter"
+require "active_support/concern"
+
 module CarrierWave
-  module Neo4j
+  module CustomNeo4j
     extend ActiveSupport::Concern
 
     module ClassMethods
