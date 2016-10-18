@@ -8,9 +8,6 @@ require "carrierwave/neo4j"
 require 'data_uri'
 require "carrierwave/neo4j-data-uri"
 
-#require 'thor'
-#require 'thor/group'
-
 
 RSpec.configure do |config|
 
@@ -29,8 +26,3 @@ RSpec.configure do |config|
 
   alias silence capture
 end
-
-#require 'bundler/setup'
-#Bundler.setup
-
-#require 'carrierwave-neo4j-data-uri'
